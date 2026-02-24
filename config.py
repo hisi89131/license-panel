@@ -1,7 +1,18 @@
 import os
 
+# Telegram Bot Token (Termux में set होगा)
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://license_db_s13l_user:XJ9oJjODUQU8jP3qazXiMipVyvRxk7Qx@dpg-d6evsv15pdvs73f432cg-a.oregon-postgres.render.com/license_db_s13l)
+# PostgreSQL Database URL (Render environment में set होगा)
+DATABASE_URL = os.getenv("DATABASE_URL")
 
-MAIN_ADMINS = ["1086634832"]
+# Main Admins (comma separated IDs in env)
+MAIN_ADMINS = [
+    int(admin_id)
+    for admin_id in os.getenv("MAIN_ADMINS", "").split(",")
+    if admin_id.strip()
+]
+
+# Basic safety check
+if not DATABASE_URL:
+    raise ValueError("DATABASE_URL is not set in environment variables")
