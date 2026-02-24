@@ -1,8 +1,4 @@
-BOT_TOKEN = "8604285991:AAGdXv7SB4csxtliTCML2OBZjZwEaGNfdFM"
+import os
 
-MAIN_ADMINS = [
-    "1086634832",
-    "1025242015"
-]
-
-DATABASE_URL = "sqlite:///edu_panel.db"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+MAIN_ADMINS = ["YOUR_TELEGRAM_ID"]
