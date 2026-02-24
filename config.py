@@ -1,8 +1,0 @@
-BOT_TOKEN = "8604285991:AAGdXv7SB4csxtliTCML2OBZjZwEaGNfdFM"
-
-MAIN_ADMINS = [
-    "1086634832",
-    "1025242015"
-]
-
-DATABASE_URL = "sqlite:///edu_panel.db"
