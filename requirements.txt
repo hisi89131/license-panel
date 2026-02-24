@@ -4,3 +4,4 @@ python-telegram-bot==20.8
 httpx==0.26.0
 pydantic==2.6.4
 SQLAlchemy==2.0.29
+psycopg2-binary==2.9.9
