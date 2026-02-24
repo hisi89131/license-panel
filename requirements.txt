@@ -3,3 +3,4 @@ uvicorn
 python-telegram-bot==20.3
 sqlalchemy
 pydantic
+psycopg2-binary
